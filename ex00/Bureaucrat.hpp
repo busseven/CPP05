@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/06 18:33:26 by busseven          #+#    #+#             */
+/*   Updated: 2026/01/06 18:33:27 by busseven         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
@@ -21,6 +33,8 @@ class Bureaucrat
 		// Getters / Setters
 		const std::string get_name() const;
 		int get_grade() const;
+		void increment_grade();
+		void decrement_grade();
 		
 		// Exceptions
 		class GradeTooHighException : public std::exception {

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/06 18:33:20 by busseven          #+#    #+#             */
+/*   Updated: 2026/01/06 18:38:36 by busseven         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 
 // Constructors
@@ -13,9 +25,15 @@ Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 	std::cout << "\e[0;33mCopy Constructor called of Bureaucrat\e[0m" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name), _grade(grade)
+Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
 {
 	std::cout << "\e[0;33mFields Constructor called of Bureaucrat\e[0m" << std::endl;
+	if(grade < 1)
+		throw Bureaucrat::GradeTooHighException();
+	else if(grade > 150)
+		throw Bureaucrat::GradeTooLowException();
+	else
+		_grade = grade;
 }
 
 
@@ -45,6 +63,23 @@ int Bureaucrat::get_grade() const
 {
 	return _grade;
 }
+
+void Bureaucrat::increment_grade()
+{
+	if(_grade - 1 < 1)
+		throw Bureaucrat::GradeTooHighException();
+	else
+		_grade = _grade - 1;
+}
+
+void Bureaucrat::decrement_grade()
+{
+	if(_grade + 1 > 150)
+		throw Bureaucrat::GradeTooLowException();
+	else
+		_grade = _grade + 1;
+}
+
 
 // Exceptions
 const char * Bureaucrat::GradeTooHighException::what() const throw()
