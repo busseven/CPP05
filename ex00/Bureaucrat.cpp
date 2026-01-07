@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 18:33:20 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/06 18:38:36 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/07 14:26:47 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,6 @@ const char * Bureaucrat::GradeTooLowException::what() const throw()
 // Stream operators
 std::ostream & operator<<(std::ostream &stream, const Bureaucrat &object)
 {
-	stream << "" << object.get_name() << ", bureaucrat grade " << object.get_grade() << "" << std::endl;
+	stream << "" << object.get_name() << ", bureaucrat grade " << object.get_grade() << "";
 	return stream;
 }
