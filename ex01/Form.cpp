@@ -1,4 +1,5 @@
 #include "Form.hpp"
+# include "Bureaucrat.hpp"
 
 // Constructors
 Form::Form(): _name("default"), _signed(false), _signgrade(150), _execgrade(150)
