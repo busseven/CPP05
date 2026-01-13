@@ -3,6 +3,7 @@
 
 # include <iostream>
 # include <string>
+# include <Bureaucrat.hpp>
 
 class Form
 {
@@ -19,10 +20,10 @@ class Form
 		Form & operator=(const Form &assign);
 		
 		// Getters / Setters
-		const std::string get_name() const;
-		bool 	get_signed() const;
-		const int get_signgrade() const;
-		const int get_execgrade() const;
+		const std::string	get_name() const;
+		bool				get_signed() const;
+		const int			get_signgrade() const;
+		const int			get_execgrade() const;
 		
 		// Exceptions
 		class GradeTooLowException : public std::exception {
@@ -31,12 +32,13 @@ class Form
 		class GradeTooHighException : public std::exception {
 			virtual const char* what() const throw();
 		};
-		
+
+		void	beSigned(Bureaucrat signer);
 	private:
-		const std::string _name;
-		bool 	_signed;
-		const int _signgrade;
-		const int _execgrade;
+		const std::string	_name;
+		bool				_signed;
+		const int			_signgrade;
+		const int			_execgrade;
 		
 };
 
