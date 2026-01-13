@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 18:33:26 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/06 18:33:27 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/13 13:45:02 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include "Form.hpp"
 
 class Bureaucrat
 {
@@ -35,6 +36,8 @@ class Bureaucrat
 		int get_grade() const;
 		void increment_grade();
 		void decrement_grade();
+
+		void signForm(Form tosign);
 		
 		// Exceptions
 		class GradeTooHighException : public std::exception {

@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 18:33:20 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/07 14:50:55 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/13 13:48:54 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,17 @@ void Bureaucrat::decrement_grade()
 		_grade = _grade + 1;
 }
 
-
+void Bureaucrat::signForm(Form tosign)
+{
+	try
+	{
+		tosign.beSigned(*this);
+	}
+	catch(std::exception &e)
+	{
+		std::cout << "couldn't sign form:" << tosign.get_name() << "because" << e.what() << std::endl;
+	}
+}
 // Exceptions
 const char * Bureaucrat::GradeTooHighException::what() const throw()
 {
