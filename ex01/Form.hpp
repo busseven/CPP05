@@ -1,0 +1,46 @@
+#ifndef FORM_HPP
+# define FORM_HPP
+
+# include <iostream>
+# include <string>
+
+class Form
+{
+	public:
+		// Constructors
+		Form();
+		Form(const Form &copy);
+		Form(const std::string _name, const int _signgrade, const int _execgrade);
+		
+		// Destructor
+		~Form();
+		
+		// Operators
+		Form & operator=(const Form &assign);
+		
+		// Getters / Setters
+		const std::string get_name() const;
+		bool 	get_signed() const;
+		const int get_signgrade() const;
+		const int get_execgrade() const;
+		
+		// Exceptions
+		class GradeTooLowException : public std::exception {
+			virtual const char* what() const throw();
+		};
+		class GradeTooHighException : public std::exception {
+			virtual const char* what() const throw();
+		};
+		
+	private:
+		const std::string _name;
+		bool 	_signed;
+		const int _signgrade;
+		const int _execgrade;
+		
+};
+
+// Stream operators
+std::ostream & operator<<(std::ostream &stream, const Form &object);
+
+#endif
