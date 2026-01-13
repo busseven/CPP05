@@ -34,7 +34,7 @@ class Form
 			virtual const char* what() const throw();
 		};
 
-		void	beSigned(Bureaucrat signer);
+		void	beSigned(Bureaucrat &signer);
 	private:
 		const std::string	_name;
 		bool				_signed;
