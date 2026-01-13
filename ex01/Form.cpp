@@ -14,6 +14,11 @@ Form::Form(const Form &copy): _name(copy.get_name()), _signed(copy.get_signed())
 
 Form::Form(const std::string name, const int signgrade, const int execgrade): _name(name), _signed(false), _signgrade(signgrade), _execgrade(execgrade)
 {
+	std::cout << "\e[0;33mFields Constructor called of Bureaucrat\e[0m" << std::endl;
+	if(_signgrade < 1 || _execgrade < 1)
+		throw Form::GradeTooHighException();
+	else if(_signgrade > 150 || _execgrade > 150)
+		throw Form::GradeTooLowException();
 	std::cout << "\e[0;33mFields Constructor called of Form\e[0m" << std::endl;
 }
 
