@@ -6,12 +6,12 @@
 #    By: busseven <busseven@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/06 18:33:37 by busseven          #+#    #+#              #
-#    Updated: 2026/01/15 13:32:35 by busseven         ###   ########.fr        #
+#    Updated: 2026/01/15 14:43:32 by busseven         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS = Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp main.cpp
+SRCS = Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp main.cpp
 CC = c++
 CXX = c++
 OBJS = $(SRCS:.cpp=.o)

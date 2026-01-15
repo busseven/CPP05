@@ -1,5 +1,7 @@
 #include "RobotomyRequestForm.hpp"
 #include <fstream>
+#include <cstdlib>
+#include <ctime>
 
 // Constructors
 RobotomyRequestForm::RobotomyRequestForm(): AForm("RobotomyRequestForm", 72, 45), _target("default")
@@ -43,4 +45,13 @@ std::string RobotomyRequestForm::getTarget() const
 
 void	RobotomyRequestForm::execute_form(Bureaucrat const & executor) const
 {
+	int random_int;
+
+	std::srand(time(NULL));
+	random_int = std::rand();
+	std::cout << "*Drilling noises*" << std::endl;
+	if(random_int % 2 == 0)
+		std::cout << _target << " has been robotomized successfully." << std::endl;
+	else
+		std::cout << "robotomy failed." << std::endl;
 }
