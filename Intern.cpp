@@ -21,12 +21,8 @@ Intern::~Intern()
 
 AForm *Intern::makeForm(std::string name, std::string target)
 {
-	
-}
 
-Aform *makeShrubbery(std::string target);
-Aform *makeRobotomy(std::string target);
-Aform *makePardon(std::string target);
+}
 
 // Operators
 Intern & Intern::operator=(const Intern &assign)
