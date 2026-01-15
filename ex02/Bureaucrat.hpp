@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 18:33:26 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 13:03:56 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/15 13:33:04 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <string>
-# include "Form.hpp"
+# include "AForm.hpp"
 # include "Bureaucrat.hpp"
 
 class Bureaucrat
