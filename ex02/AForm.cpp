@@ -70,7 +70,20 @@ const char * AForm::GradeTooHighException::what() const throw()
 {
 	return "Grade too high!";
 }
+const char * AForm::NotSignedException::what() const throw()
+{
+	return "Form is not signed!";
+}
 
+void	AForm::execute(Bureaucrat const & executor) const
+{
+	if(!_signed)
+		throw AForm::NotSignedException();
+	else if(executor.get_grade() > _execgrade)
+		throw AForm::GradeTooLowException();
+	else
+		execute_form(executor);
+}
 
 // Stream operators
 std::ostream & operator<<(std::ostream &stream, const AForm &object)

@@ -20,8 +20,8 @@ class ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm & operator=(const ShrubberyCreationForm &assign);
 		
 		// Getters / Setters
-		std::string getTarget() const;
-		void	execute(Bureaucrat const & executor) const;
+		std::string		getTarget() const;
+		virtual void	execute_form(Bureaucrat const & executor) const;
 		
 	private:
 		std::string _target;
