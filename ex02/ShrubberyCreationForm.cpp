@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:52:33 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 14:52:34 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/15 15:04:46 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,10 @@ std::string ShrubberyCreationForm::getTarget() const
 
 void	ShrubberyCreationForm::execute_form(Bureaucrat const & executor) const
 {
-	std::ofstream file("_shrubbery");
+	std::string file_name;
+
+	file_name = _target + "_shrubbery";
+	std::ofstream file(file_name);
 	if(!file)
 		throw FileDescriptorException();
 	file << "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠒⠉⠉⠉⢢⠤⠤⡀⢀⣀⣀⠀⡠⠖⠋⠉⠉⠒⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀" << std::endl;
