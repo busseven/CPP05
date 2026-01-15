@@ -21,6 +21,7 @@ class ShrubberyCreationForm: public AForm
 		
 		// Getters / Setters
 		std::string getTarget() const;
+		void	execute(Bureaucrat const & executor) const;
 		
 	private:
 		std::string _target;
