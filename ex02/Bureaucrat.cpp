@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 18:33:20 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 14:51:26 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/15 14:57:55 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,18 @@ const char * Bureaucrat::GradeTooLowException::what() const throw()
 	return "Grade too Low!";
 }
 
+void Bureaucrat::executeForm(AForm const & form) const
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << _name << " executed " << form.get_name() << std::endl;
+	}
+	catch(std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
 
 // Stream operators
 std::ostream & operator<<(std::ostream &stream, const Bureaucrat &object)

@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 18:33:26 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 13:33:04 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/15 14:55:31 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ class Bureaucrat
 		void decrement_grade();
 
 		void signForm(AForm &tosign);
+		void executeForm(AForm const & form) const;
 		
 		// Exceptions
 		class GradeTooHighException : public std::exception {
