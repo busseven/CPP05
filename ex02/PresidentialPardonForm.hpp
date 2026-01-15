@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/15 14:51:40 by busseven          #+#    #+#             */
+/*   Updated: 2026/01/15 14:51:41 by busseven         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PresidentialPardonForm_HPP
 # define PresidentialPardonForm_HPP
 
