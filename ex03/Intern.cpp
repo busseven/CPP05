@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 19:37:26 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 19:37:27 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/15 19:40:51 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ AForm *Intern::makeForm(std::string name, std::string target)
 	std::string formtypes[] = {"robotomy request", "shrubbery creation", "presidential pardon"};
 	while(i < 3 && formtypes[i] != name)
 		i++;
+	if(i < 3)
+		std::cout << "Intern creates " << name << std::endl;
 	switch(i)
 	{
 		case 0:
