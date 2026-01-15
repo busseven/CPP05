@@ -22,6 +22,11 @@ class ShrubberyCreationForm: public AForm
 		// Getters / Setters
 		std::string		getTarget() const;
 		virtual void	execute_form(Bureaucrat const & executor) const;
+
+		// Exceptions
+		class FileDescriptorException : public std::exception {
+			virtual const char* what() const throw();
+		};
 		
 	private:
 		std::string _target;
