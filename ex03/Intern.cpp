@@ -28,7 +28,7 @@ AForm *Intern::makeForm(std::string name, std::string target)
 
 	i = 0;
 	std::string formtypes[] = {"robotomy request", "shrubbery creation", "presidential pardon"};
-	while(i < 2 && formtypes[i] != name)
+	while(i < 3 && formtypes[i] != name)
 		i++;
 	switch(i)
 	{

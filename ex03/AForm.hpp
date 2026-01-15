@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:51:22 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 14:51:23 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/15 19:16:42 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class AForm
 		AForm(const std::string _name, const int _signgrade, const int _execgrade);
 		
 		// Destructor
-		~AForm();
+		virtual ~AForm();
 		
 		// Operators
 		AForm & operator=(const AForm &assign);
