@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 18:33:29 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 19:16:13 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/20 12:31:58 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int main()
 		delete Pform;
 		delete Sform;
 		AForm *Nform = intern.makeForm("Non existent form", "default");
+		(void)Nform;
 	}
 	catch(std::exception &e)
 	{

@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:52:36 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 14:52:37 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/20 12:31:15 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class ShrubberyCreationForm: public AForm
 		
 		// Getters / Setters
 		std::string		getTarget() const;
-		virtual void	execute_form(Bureaucrat const & executor) const;
+		virtual void	execute_form() const;
 
 		// Exceptions
 		class FileDescriptorException : public std::exception {

@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:52:28 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 14:52:29 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/20 12:30:53 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class RobotomyRequestForm: public AForm
 		
 		// Getters / Setters
 		std::string		getTarget() const;
-		virtual void	execute_form(Bureaucrat const & executor) const;
+		virtual void	execute_form() const;
 		
 	private:
 		std::string _target;
