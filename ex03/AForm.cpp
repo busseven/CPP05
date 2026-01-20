@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:51:17 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/20 12:30:07 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/20 12:38:53 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void	AForm::execute(Bureaucrat const & executor) const
 	else if(executor.get_grade() > _execgrade)
 		throw AForm::GradeTooLowException();
 	else
-		execute_form(executor);
+		execute_form();
 }
 
 // Stream operators
