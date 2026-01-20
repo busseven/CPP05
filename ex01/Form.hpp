@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:51:47 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 15:05:54 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/20 12:42:56 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ class Form
 		// Getters / Setters
 		const std::string	get_name() const;
 		bool				get_signed() const;
-		const int			get_signgrade() const;
-		const int			get_execgrade() const;
+		int					get_signgrade() const;
+		int					get_execgrade() const;
 		
 		// Exceptions
 		class GradeTooLowException : public std::exception {

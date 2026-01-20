@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:51:53 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 15:15:07 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/20 12:43:08 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,11 @@ bool Form::get_signed() const
 {
 	return _signed;
 }
-const int Form::get_signgrade() const
+int Form::get_signgrade() const
 {
 	return _signgrade;
 }
-const int Form::get_execgrade() const
+int Form::get_execgrade() const
 {
 	return _execgrade;
 }
