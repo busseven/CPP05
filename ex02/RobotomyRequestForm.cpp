@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:51:42 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 14:51:43 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/20 12:40:29 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ std::string RobotomyRequestForm::getTarget() const
 	return _target;
 }
 
-void	RobotomyRequestForm::execute_form(Bureaucrat const & executor) const
+void	RobotomyRequestForm::execute_form() const
 {
 	int random_int;
 

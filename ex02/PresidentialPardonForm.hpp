@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:51:40 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 14:51:41 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/20 12:41:39 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class PresidentialPardonForm: public AForm
 		
 		// Getters / Setters
 		std::string		getTarget() const;
-		virtual void	execute_form(Bureaucrat const & executor) const;
+		virtual void	execute_form() const;
 		
 	private:
 		std::string _target;

@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:51:22 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 14:51:23 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/20 12:40:44 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ class AForm
 		// Getters / Setters
 		const std::string	get_name() const;
 		bool				get_signed() const;
-		const int			get_signgrade() const;
-		const int			get_execgrade() const;
+		int					get_signgrade() const;
+		int					get_execgrade() const;
 		
 		// Exceptions
 		class GradeTooLowException : public std::exception {
@@ -50,7 +50,7 @@ class AForm
 		};
 		void	beSigned(Bureaucrat &signer);
 		void	execute(Bureaucrat const & executor) const;
-		virtual void	execute_form(Bureaucrat const & executor) const = 0;
+		virtual void	execute_form() const = 0;
 
 	private:
 		const std::string	_name;

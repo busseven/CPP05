@@ -6,7 +6,7 @@
 /*   By: busseven <busseven@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:51:17 by busseven          #+#    #+#             */
-/*   Updated: 2026/01/15 15:15:16 by busseven         ###   ########.fr       */
+/*   Updated: 2026/01/20 12:40:50 by busseven         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,11 @@ bool AForm::get_signed() const
 {
 	return _signed;
 }
-const int AForm::get_signgrade() const
+int AForm::get_signgrade() const
 {
 	return _signgrade;
 }
-const int AForm::get_execgrade() const
+int AForm::get_execgrade() const
 {
 	return _execgrade;
 }
@@ -94,7 +94,7 @@ void	AForm::execute(Bureaucrat const & executor) const
 	else if(executor.get_grade() > _execgrade)
 		throw AForm::GradeTooLowException();
 	else
-		execute_form(executor);
+		execute_form();
 }
 
 // Stream operators
